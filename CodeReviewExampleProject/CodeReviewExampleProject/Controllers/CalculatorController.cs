@@ -13,7 +13,7 @@ namespace CodeReviewExampleProject.Services.Controllers
         private CalculatorManager _calculatorManager;
 
         [HttpGet("Run")]
-        public async Task<ActionResult<ResponseModel>> GetListAsync(RequestModel request)
+        public async Task<ActionResult<ResponseModel>> RunAsync(RequestModel request)
         {
             ResponseModel response = _calculatorManager.Run(request);
             return Ok(response);
